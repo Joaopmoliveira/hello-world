@@ -12,7 +12,9 @@ Then you have git installed on your machine. If an error is given, then install 
 
 2. To install all the necessary libraries we first need to install the vcpkg package manager (the process can be done manually but it is easier this way) which allows one to link projects with a large array of libraries already developed in C\C++. The instalation of vcpkg is trivial, you just open a command line, and write 
 >\> git clone https://github.com/Microsoft/vcpkg.git
+
 >\> cd vcpkg
+
 >\> .\bootstrap-vcpkg.bat
 
 3. Now we have to install the dependencies for the vkvg library which are : 
@@ -35,19 +37,21 @@ To find if the library already has a port for the vcpkg packadge manager
 And do the same drill for all the other libraries...
 
 >\> vcpkg install freetype
+
 >\> vcpkg install fontconfig
+
 >...
 
-5. What we just did was that we download the source files from the open sourced projects and we compiled them with the MSVN compiler so we know we won't be facing any incompatibilities when compiling our tutorial. Now we can download the source code from the vkvg library by typing:
+5. What we just did was that we download the source files from the open sourced projects and we compiled them with the MSVN compiler so we know we won't be facing any incompatibilities when compiling our tutorial. Now we can download the source code for the vkvg library by typing:
 
 >\> cd ..
 
-To get out of the vcpkg directory and then write:
+On the command line to get out of the vcpkg directory and then write:
 
 >\> git clone https://github.com/jpbruyere/vkvg.git
+
+To download the code to a local repository
 
 6. Now we can use the IDE from CMake to generate the .sln file which can be processed by visual studio. Open the IDE and select the directory which contains the source code (it should be something like "C:\...\vkvg"). Now select the folder where you want to generate the project to. In our case we created a folder called bin ("C:\...\vkvg\bin") and selected that file. Now configure the project. This action generated a window where you can select the target build you want, in our case it is Visual Studio 15 2017 Win64 and we must specify the toolchain file for cross-compiling (because it is the vcpkg program which knowns where all the libraries we previously downloaded currently are). It should be a file located in 'C:\...\vcpkg\scripts\buildsystems\vcpkg.cmake' which contains information to be used by cmake. Now we can finish the project and if everything went well we can now select the options of the project for this specific tutorial. On the bottom of the GUI there are some options related with the VKVG libraries. You will unselect the VKVG_LCD_FONT_FILTER because we did not compile the FreeType library with this option enabled. Now press generate project and then procede to press open project. This should open the Visual Studio IDE. Now you can see the the possible built configurations.To build the project (the ALL BUILD should be the Start Up project) press F7 or press build (top of the screen) and then build solution. If everything goes well we now have a .lib and .dll folder to use in our projects.
 
 7. The project is compiled and if you go to the 'C:\...\vkvg\bin\CMakeFiles\Debug' directory you will find all the .dlls and .libs files to integrate in your projects.
-
-extra
