@@ -26,33 +26,7 @@ To install all these libraries we can simply write (assuming you are still on vc
 
 >\> vcpkg search vulkan
 
-Which will output something like:
-
-> angle                2019-12-31-2     A conformant OpenGL ES implementation for Windows, Mac and Linux. The goal of ... 
-
-> glad                 0.1.33-1         Multi-Language Vulkan/GL/GLES/EGL/GLX/WGL Loader-Generator based on the offici... 
-
-> glfw3                3.3.2            GLFW is a free, Open Source, multi-platform library for OpenGL, OpenGL ES and ...  
-
-> llgl                 2019-08-15       Low Level Graphics Library (LLGL) is a thin abstraction layer for the modern g...  
-
-> ms-angle             2018-04-18-2     The UWP version of a conformant OpenGL ES implementation for Windows, Mac and ... 
-
-> openxr-loader[vulkan]                 Vulkan functionality for OpenXR   
-
-> sdl2[vulkan]                          Vulkan functionality for SDL   
-
-> volk                 2019-09-26       Meta loader for Vulkan API. Note that the static library target volk::volk is ...
-
-> vulkan               1.1.82.1-1       A graphics and compute API that provides high-efficiency, cross-platform acces... 
-
-> vulkan-hpp           2019-05-11-1     Header only C++ bindings for the Vulkan C API 
-
-> vulkan-memory-all... 2.3.0            Easy to integrate Vulkan memory allocation library from GPUOpen 
-
-> If your library is not listed, please open an issue at and/or consider making a pull request:
-
->    https://github.com/Microsoft/vcpkg/issues
+To find if the library already has a port for the vcpkg packadge manager
 
 4. So now we know that the library is currently usable from the vcpkg program so we can now write:
 
